@@ -4,6 +4,7 @@ import { Field, Form } from 'formik';
 export const Formstyled = styled(Form)`
   display: flex;
   flex-direction: column;
+  margin-right: 100px;
 `;
 
 export const BtnPhone = styled.button`

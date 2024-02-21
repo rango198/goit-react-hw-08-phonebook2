@@ -3,8 +3,8 @@ import { Input, Label } from './Filter.styled';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { filterSet } from '../../redux/filter/filter-slice';
-import { selectFilter } from '../../redux/contacts/contacs-selectors';
+import { filterSet } from '../../../redux/filter/filter-slice';
+import { selectFilter } from '../../../redux/contacts/contacs-selectors';
 
 export const Filter = () => {
   const dispatch = useDispatch();
