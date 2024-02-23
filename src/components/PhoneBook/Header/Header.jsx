@@ -15,7 +15,7 @@ function Header() {
           <LogoHome to="/">
             <FaHome />
           </LogoHome>
-          {isLogin && <LogoHome to="/phoneBook">PhoneBook</LogoHome>}
+          {isLogin && <LogoHome to="/phoneBook">Contacts</LogoHome>}
         </div>
         <div>
           {isLogin ? (

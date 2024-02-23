@@ -32,7 +32,7 @@ const phoneBookSlice = createSlice({
       .addCase(deleteContactThunk.pending, pending)
       .addCase(deleteContactThunk.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.contacts = state.contacts.filter(({ _id }) => _id !== payload);
+        state.contacts = state.contacts.filter(({ id }) => id !== payload);
       })
       .addCase(deleteContactThunk.rejected, rejected);
   },

@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 export const List = styled.ul`
-  /* display: flex;
-  flex-direction: column; */
-  /* margin-top: 15px;
-  gap: 15px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 15px;
   height: 300px;
   overflow-y: auto;
 `;

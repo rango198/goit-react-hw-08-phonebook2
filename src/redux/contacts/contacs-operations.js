@@ -24,32 +24,32 @@ export const addContactThunk = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  },
-  {
-    condition: ({ name, email }, { getState }) => {
-      const { phoneBook } = getState();
-      const normalizedTitle = name.toLowerCase();
-      const normalizedAuthor = email.toLowerCase();
-
-      const dublicate = phoneBook.contacts.find(item => {
-        const normalizedCurrentTitle = item.name.toLowerCase();
-        const normalizedCurrentAuthor = item.email.toLowerCase();
-        return (
-          normalizedCurrentTitle === normalizedTitle &&
-          normalizedCurrentAuthor === normalizedAuthor
-        );
-      });
-
-      if (dublicate) {
-        alert(`Book with ${name} and ${email} already in list`);
-        return false;
-      }
-    },
   }
+  // {
+  //   condition: ({ name, email }, { getState }) => {
+  //     const { phoneBook } = getState();
+  //     const normalizedTitle = name.toLowerCase();
+  //     const normalizedAuthor = email.toLowerCase();
+
+  //     const dublicate = phoneBook.contacts.find(item => {
+  //       const normalizedCurrentTitle = item.name.toLowerCase();
+  //       const normalizedCurrentAuthor = item.email.toLowerCase();
+  //       return (
+  //         normalizedCurrentTitle === normalizedTitle &&
+  //         normalizedCurrentAuthor === normalizedAuthor
+  //       );
+  //     });
+
+  //     if (dublicate) {
+  //       alert(`Book with ${name} and ${email} already in list`);
+  //       return false;
+  //     }
+  //   },
+  // }
 );
 
 export const deleteContactThunk = createAsyncThunk(
-  'books/deleteContact',
+  'phonebook/deleteContact',
   async (id, { rejectWithValue }) => {
     try {
       await contactsApi.deleteContact(id);
