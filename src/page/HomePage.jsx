@@ -1,9 +1,9 @@
-import HomePhone from './Page.styled';
+import HomePhone, { Title } from './Page.styled';
 
 const HomePage = () => {
   return (
     <div>
-      <h1>PhoneBook</h1>
+      <Title>PhoneBook</Title>
       <HomePhone />
     </div>
   );

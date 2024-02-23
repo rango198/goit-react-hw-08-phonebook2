@@ -6,8 +6,8 @@ import {
   selectPhoneBookValue,
 } from '../../../redux/contacts/contacs-selectors';
 import { List } from './ContactsList.styled';
-import { ListItemContact } from '../ContactItem/ContactItem';
-import { useEffect } from 'react';
+import { ItemContact } from '../ContactItem/ContactItem';
+import { Fragment, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getContactsThunk } from '../../../redux/contacts/contacs-operations';
 import Loader from 'components/Loader/Loader';
@@ -28,7 +28,11 @@ export const ContactsList = () => {
       {!error && (
         <List>
           {visibleContacts.map(contacts => {
-            return <ListItemContact key={contacts.id} {...contacts} />;
+            return (
+              <Fragment key={contacts.id}>
+                <ItemContact {...contacts} />
+              </Fragment>
+            );
           })}
         </List>
       )}

@@ -10,9 +10,10 @@ export const LogoHome = styled(NavLink)`
   display: inline-block;
   padding-top: 14px;
   color: #d3d2d2;
+  margin-left: 30px;
 
   font-size: 35px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 6px 2px rgba(0, 0, 0, 0.2);
 
   :hover,
   :focus,

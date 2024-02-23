@@ -34,7 +34,7 @@ export const BtnItem = styled.button`
   }
 `;
 
-export const ListItem = styled.li`
+export const LiItem = styled.li`
   display: flex;
   align-items: center;
   gap: 10px;

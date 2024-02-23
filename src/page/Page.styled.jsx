@@ -20,8 +20,8 @@ export const HomeImg = styled.div`
   background-image: url(${imgi});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 720px;
-  height: 425px;
+  width: 645px;
+  height: 361px;
 `;
 
 const HomePhone = ({ children }) => {
@@ -29,3 +29,12 @@ const HomePhone = ({ children }) => {
 };
 
 export default HomePhone;
+
+export const Title = styled.h1`
+  margin-top: 15px;
+  margin-left: 250px;
+  color: #0c1d24;
+
+  font-size: 35px;
+  text-shadow: 2px 6px 2px rgba(0, 0, 0, 0.2);
+`;

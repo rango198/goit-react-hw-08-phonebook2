@@ -4,6 +4,7 @@ import { pending, rejected } from '../../shared/functions/redux';
 import {
   addContactThunk,
   deleteContactThunk,
+  editContactThunk,
   getContactsThunk,
 } from './contacs-operations';
 
@@ -34,7 +35,15 @@ const phoneBookSlice = createSlice({
         state.isLoading = false;
         state.contacts = state.contacts.filter(({ id }) => id !== payload);
       })
-      .addCase(deleteContactThunk.rejected, rejected);
+      .addCase(deleteContactThunk.rejected, rejected)
+      .addCase(editContactThunk.pending, pending)
+      .addCase(editContactThunk.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.contacts = state.contacts.map(contact =>
+          contact.id === payload.id ? payload : contact
+        );
+        state.error = null;
+      });
   },
 });
 

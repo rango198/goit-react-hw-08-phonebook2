@@ -14,3 +14,14 @@ export const deleteContact = async id => {
   const { data } = await instance.delete(`/contacts/${id}`);
   return data;
 };
+
+// export const editContact = async body => {
+//   const { data } = await instance.patch(`/contacts/${body.id}`, body);
+//   return data;
+// };
+export const editContact = contact => {
+  return instance.patch(`/contacts/${contact.id}`, {
+    name: contact.name,
+    number: contact.number,
+  });
+};
