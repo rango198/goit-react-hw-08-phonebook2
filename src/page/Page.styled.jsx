@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import imgi from '../photo/imagee.png';
 
 export const WrapperList = styled.div`
   display: flex;
@@ -14,3 +15,17 @@ export const WrapContainer = styled.div`
 // export const WrapTitle = styled.h1`
 //   display: inline-block;
 // `;
+
+export const HomeImg = styled.div`
+  background-image: url(${imgi});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 720px;
+  height: 425px;
+`;
+
+const HomePhone = ({ children }) => {
+  return <HomeImg>{children}</HomeImg>;
+};
+
+export default HomePhone;

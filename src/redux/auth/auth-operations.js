@@ -23,7 +23,6 @@ export const login = createAsyncThunk(
   'auth/login',
   async (body, { rejectWithValue }) => {
     try {
-      console.log(body);
       const data = await loginRequest(body);
       return data;
     } catch (error) {
@@ -37,9 +36,9 @@ export const current = createAsyncThunk(
   async (_, { rejectWithValue, getState }) => {
     try {
       const { auth } = getState();
-      console.log(auth);
+
       const data = await currentRequest(auth.token);
-      console.log(data);
+
       return data;
     } catch (error) {
       return rejectWithValue(error.response.data.message);

@@ -7,7 +7,7 @@ import UserMenu from '../UserMenu/UserMenu';
 
 function Header() {
   const isLogin = useSelector(selectIsLogin);
-  console.log(isLogin);
+
   return (
     <header>
       <NavMenu>

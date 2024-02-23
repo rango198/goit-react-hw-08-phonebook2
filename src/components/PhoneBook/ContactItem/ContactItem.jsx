@@ -19,7 +19,6 @@ export const ListItemContact = ({ id, name, number }) => {
     }));
     dispatch(deleteContactThunk(contactId));
   };
-  console.log(selectedContact);
 
   // const closeModal = () => {
   //   setSelectedContact(null);
