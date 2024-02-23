@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import React from 'react';
 import img from '../../photo/cup-of-coffee-1280537_1920.jpg';
 
-
 const Background = styled.div`
   background-image: url(${img});
   background-size: cover;
@@ -10,7 +9,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  padding-top: 60px;
+  padding-top: 30px;
 `;
 
 const BackgroundHome = ({ children }) => {

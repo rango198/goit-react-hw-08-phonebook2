@@ -31,8 +31,10 @@ const HomePhone = ({ children }) => {
 export default HomePhone;
 
 export const Title = styled.h1`
-  margin-top: 15px;
-  margin-left: 250px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
   color: #0c1d24;
 
   font-size: 35px;
